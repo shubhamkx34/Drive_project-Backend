@@ -8,14 +8,10 @@
       href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
       rel="stylesheet"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
   </head>
   <body class="bg-gray-800 text-white min-h-screen w-screen">
     <div class="p-10 flex justify-center items-center flex-col">
-      <form action="/user/register" method="post">
+      <form action="/login" method="post">
         <div class="mb-10">
           <label
             for="website-admin"
@@ -32,31 +28,8 @@
             <input
               type="text"
               id="website-admin"
-              class="rounded-none rounded-e-base block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-sm rounded-base text-black placeholder:text-black"
+              class="rounded-none rounded-e-base block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base text-black placeholder:text-black"
               placeholder="Enter Your Username"
-              name="username"
-            />
-          </div>
-        </div>
-
-        <div class="mb-10">
-          <label
-            for="input-group-1"
-            class="block mb-2.5 text-sm font-medium text-heading"
-            >Your Email</label
-          >
-          <div class="flex shadow-xs rounded-base">
-            <span
-              class="inline-flex items-center px-3 text-sm text-body bg-neutral-tertiary border rounded-e-0 border-default-medium border-e-0 rounded-s-base"
-            >
-              <i class="ri-mail-line"></i>
-            </span>
-            <input
-              type="text"
-              id="input-group-1"
-              class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base text-black shadow-xs placeholder:text-black"
-              placeholder="name@gmail.com"
-              name="email"
             />
           </div>
         </div>
@@ -78,22 +51,19 @@
               id="Password"
               class="rounded-none rounded-e-base block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base text-black placeholder:text-black"
               placeholder="********"
-              name="password"
             />
           </div>
         </div>
-
         <div class="mb-15 mt-10">
           <button
-            type="Submit"
-            class="border-4 rounded-4xl text-white mx-20 h-15 w-40 bg-gray-800 hover-gray-600"
+            type="submit"
+            class="border-4 rounded-4xl text-white mx-20 h-15 w-40"
           >
             Submit
           </button>
         </div>
       </form>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
   </body>
 </html>
