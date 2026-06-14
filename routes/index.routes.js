@@ -39,6 +39,7 @@ router.get("/download", authMiddleware, async (req, res) => {
   
   //First To match userid of the uploaded file for authentication
   const loggedInUserId = req.user.userId
+  const path = req.user.path
   const file = await fileModal.findOne({
     user: loggedInUserId
   })
@@ -47,7 +48,6 @@ router.get("/download", authMiddleware, async (req, res) => {
       message:'Unauthorized'
     })
   }
-  
   
   
   const fileUrl = req.query.path;
