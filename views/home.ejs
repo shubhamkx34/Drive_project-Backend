@@ -26,8 +26,11 @@
     <div
       class="pop hidden fixed inset-0 z-50 backdrop-blur-md bg-black/30 flex items-center justify-center"
     >
-      <button class="absolute top-5 right-6 cursor-pointer" onclick="hidePopUp()">
-        <i class="ri-close-large-fill text-3xl"></i>
+      <button
+        class="absolute top-5 right-6 cursor-pointer"
+        onclick="hidePopUp()"
+      >
+        <i class="ri-close-large-fill text-white text-3xl"></i>
       </button>
 
       <form action="/upload" method="post" enctype="multipart/form-data">
@@ -72,6 +75,16 @@
         </div>
       </form>
     </div>
+
+    <div class="files mt-3 flex flex-col "> 
+     <% files.forEach((file) => { %>   
+      <div class="bg-gray-300 py-4 px-6 mx-7 mt-4  cursor-pointer font-semibold rounded-md flex justify-between gap-5">
+        <h1><%= file.originalname %></h1> 
+        <a href="/download?path=<%= encodeURIComponent(file.path) %>&name=<%= encodeURIComponent(file.originalname) %>"><i class="ri-download-cloud-2-line text-2xl "></i></a>
+      </div>
+      <% }) %>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 
